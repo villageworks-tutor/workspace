@@ -1,0 +1,16 @@
+p {
+  margin: 2em;
+}
+
+dl {
+  overflow: hidden;
+  line-height: 1.4;
+}
+dl dt, dl dd {
+  float: left;
+  margin-top: 0.75em;
+}
+dl dd {
+  width: 27em;
+  margin-left: 1.25em;
+}
