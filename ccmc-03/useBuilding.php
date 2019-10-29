@@ -1,5 +1,7 @@
 <?php
+/** 外部ファイルの読込み */
 require_once "class/building.php";
+/** Buildingクラスのインスタンスを生成 */
 $kasumigaseki = new Building("霞が関ビル", 147);
 $sunshine = new Building("サンシャイン60", 240);
 ?>
