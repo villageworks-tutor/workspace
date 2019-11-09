@@ -8,8 +8,8 @@ class Building {
 	 * @var string $name   建物名
 	 * @var int    $height 建物の高さ
 	 */
-	private $name;
-	private $height;
+	protected $name;
+	protected $height;
 
 	/**
 	 * コンストラクタ（constructor）：インスタンス化されるときに最初に呼ばれるメソッド
