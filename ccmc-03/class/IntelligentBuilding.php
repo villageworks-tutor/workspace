@@ -1,4 +1,5 @@
 <?php
+/** 外部ファイルを読み込む */
 require_once "Building.php";
 require_once "Iintelligence.php";
 ?>

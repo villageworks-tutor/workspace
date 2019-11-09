@@ -41,7 +41,7 @@ class Tower extends Building {
 	 * @return string 諸元文字列「〈建物名〉の高さは〈建物の高さ〉mで、〈開業年〉年に開業しました。」
 	 */
 	function getProfile():string {
-		$profile = "{$this->name} の高さは {$this->height} mで、{$this->getProfile()} 年に開業しました。";
+		$profile = "{$this->name} の高さは {$this->height} mで、{$this->builtYear} 年に開業しました。";
 		return $profile;
 	}
 
