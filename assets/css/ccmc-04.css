@@ -1,0 +1,7 @@
+table th, table td {
+	border-width: 0;
+}
+table td[colspan="2"] {
+	padding: 2rem 0;
+	text-align: center;
+}
