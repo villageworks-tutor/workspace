@@ -1,3 +1,16 @@
+<?php
+// セッションを開始
+session_start();
+// セッションに「id」キーが登録されているかどうかを検査
+if (isset($_SESSION["id"])) {
+    $_SESSION = [];
+    session_destroy();
+}
+
+// セッションの確認
+print_r($_SESSION);
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,14 +22,7 @@
 </head>
 <body>
 	<h1>簡単なユーザ認証</h1>
-	<?php if ($isLogined === true) { ?>
-	<p>ようこそ、usr01さん</p>
-	<p><a href="logout.php">ログアウトする</a></p>
-	<p><a href="other.php">to other page</a></p>
-	<?php } else { ?>
-	<p>ログインに失敗しました。</p>
+	<p>ログアウトしました。</p>
 	<p><a href="entry.html">ログインページへ</a></p>
-	<?php } ?>
->>>>>>> class/2S
 </body>
 </html>
