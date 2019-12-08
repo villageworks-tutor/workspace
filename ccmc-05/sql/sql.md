@@ -26,7 +26,7 @@
 ## SQL文
 
 	1. Create ─ INSERT文（insert statement）
-		insert into table_name (field_name_1, field_name_2, ..., field_name_n) values (field_value_1, field_value_2, ..., field_value_n);
+		【書式】insert into table_name [(field_name_1, field_name_2, ..., field_name_n)] values (field_value_1, field_value_2, ..., field_value_n);
 
 		・フィールドfield_name_nに設定する値はfield_value_nに対応する。
 		・すべてのフィールドに値を設定する場合はvalues句の前にフィールド名リストを省略することができる。
@@ -35,17 +35,17 @@
 				insert into mebers (id, name, gender) values ('007', 'ジェームズ・ボンド', '男性');
 	
 	2. Read ─ SELECT文（select statement）
-		select (*|field_name_1, field_name_2, ..., field_name_n) from table_name [where ....[order by [(ASC|DESC)]]];
+		【書式】select (*|field_name_1, field_name_2, ..., field_name_n) from table_name [where ....[order by [(ASC|DESC)]]];
 
+		・selectに続けて抽出するフィールドを「,」区切りで指定する。ただし、すべてのフィールドを指定する場合は「*」で省略することができる。
 		・WHERE句（where phrase）抽出するレコードを指定するための条件
 		・ORDER By句（order by phrase）抽出したレコードの並べ替えを指定する（ASC：昇順、DESC：降順）。
-		・昇順：AtoZ、降順：ZtoA
 
 		ex）itemsテーブルからid「1001」のレコードを抽出する場合
 				select * from items where id = 1001;
 	
 	3. Update ─ UPDATE文（update statement）
-		update table_name set field_name_1 = field_value_1, field_name_2 = field_value_2, ..., field_name_n = field_value_n [where ...];
+		【書式】update table_name set field_name_1 = field_value_1, field_name_2 = field_value_2, ..., field_name_n = field_value_n [where ...];
 
 		・WHERE句　更新対象となるレコードの条件（更新対象の条件を指定しない場合はすべてのレコードの指定フィールドが更新されてしまうので注意）
 	
@@ -56,7 +56,7 @@
 				update employees set salary = salary * 1.25;
 
 	4. Delete ─ DELETE文（delete statement）
-		delete from table_name [where ...];
+		【書式】delete from table_name [where ...];
 
 		・WHERE句　削除対象となるレコードの条件（多くの場合はテーブルの主キーを指定するが、指定されない場合はテーブルのすべてのレコードが削除されるので注意）
 
