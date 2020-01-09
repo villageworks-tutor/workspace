@@ -1,3 +1,10 @@
+<?php
+/** 外部ファイルの読込み */
+require_once "class/Tower.php";
+/** Towerクラスのインスタンスを生成 */
+$tokyoTower = new Tower("東京タワー", 333, 1958);
+$skyTree = new Tower("東京スカイツリー", 634, 2012);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
