@@ -1,7 +1,10 @@
 <?php
-require_once("funx.php");
+require_once "funx.php";
+require_once "Item.php";
+?>
+<?php
+$items = [];
 $items = createItems();
-var_dump($items);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -16,12 +19,12 @@ var_dump($items);
 	<h1>ショップシステム</h1>
 	<table>
 		<tr>
-    		<th>楽器名</th>
+			<th>楽器名</th>
 			<th>価格</th>
 			<th></th>
 		</tr>
 		<?php for ($i = 0; $i < count($items); $i++) { ?>
-			<tr>
+		<tr>
 			<td><?= $items[$i]->getName() ?></td>
 			<td><?= $items[$i]->getPrice() ?>円</td>
 			<td><a href="cart.php?id=<?= $i ?>">カートに入れる</a></td>
@@ -30,10 +33,3 @@ var_dump($items);
 	</table>
 </body>
 </html>
-
-
-
-
-
-
-
