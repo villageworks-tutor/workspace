@@ -1,13 +1,13 @@
 <?php
 // セッションを開始
 session_start();
-
-// ログアウト処理
+// セッションに「id」キーが登録されているかどうかを検査
 if (isset($_SESSION["id"])) {
     $_SESSION = [];
     session_destroy();
 }
 
+// セッションの確認
 print_r($_SESSION);
 
 ?>
