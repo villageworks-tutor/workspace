@@ -1,3 +1,9 @@
+<?php
+/** 外部ファイルの読込み */
+require_once "class/IntelligentBuilding.php";
+/** IntelligentBuildingクラスのインスタンスを生成 */
+$midTown = new IntelligentBuilding("東京ミッドタウン", 248);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,11 +17,11 @@
 <body>
 	<h1>IntelligentBuildingクラスを利用する</h1>
 	<dl>
-		<dt>東京ミッドタウン</dt>
+		<dt><?= $midTown->getName() ?></dt>
 		<dd>
-			東京ミッドタウンの高さは248mです。<br />
-			オートロック完備です。<br />
-			無線LAN常時接続できます。
+			<?= $midTown->getProfile() ?><br />
+			<?= $midTown->isAutoLocked() ?><br />
+			<?= $midTown->accessWiFi() ?>
 		</dd>
 	</dl>
 	<p><a href="index.html">インデックスに戻る</a></p>

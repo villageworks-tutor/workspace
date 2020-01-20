@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 // セッションを開始
 session_start();
 // セッションに「id」キーが登録されているかどうかを検査
@@ -9,6 +10,16 @@ if (isset($_SESSION["id"])) {
 
 // セッションの確認
 print_r($_SESSION);
+=======
+/** セッションを開始 */
+session_start();
+
+/** セッションを破棄 */
+if (isset($_SESSION["login_id"])) {
+	$_SESSION = [];
+	session_destroy();
+}
+>>>>>>> 97aa60d72d1773041d0d722c6da86b61053761ac
 
 ?>
 <!DOCTYPE html>
@@ -23,6 +34,10 @@ print_r($_SESSION);
 <body>
 	<h1>簡単なユーザ認証</h1>
 	<p>ログアウトしました。</p>
+<<<<<<< HEAD
 	<p><a href="entry.html">ログインページへ</a></p>
+=======
+	<p><a href="entry.php">ログインページへ</a></p>
+>>>>>>> 97aa60d72d1773041d0d722c6da86b61053761ac
 </body>
 </html>
