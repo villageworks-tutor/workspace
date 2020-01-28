@@ -12,6 +12,9 @@ $pstmt = $pdo->prepare($sql);
 $pstmt->execute();
 // 結果セットの取得
 $rs = $pstmt->fetchAll();
+// データベース接続オブジェクトを破棄
+disconnectDatabase($pdo);
+
 // 結果セットを配列に格納
 $areas = [];
 foreach ($rs as $record) {
