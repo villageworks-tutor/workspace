@@ -37,7 +37,7 @@ foreach ($rs as $record) {
 		<select name="area">
 			<option value="0">-- 選択してください --</option>
 			<?php foreach ($areas as $area) { ?>
-			<option value="<= $area->getId()  ?>"><?= $area->getName() ?></option>
+			<option value="<?= $area->getId()  ?>"><?= $area->getName() ?></option><!-- $area->getId() の開始タグに「?」が抜けていたので追加修正 -->
 			<?php } ?>
 		</select>
 		<input type="submit" value="選択" />
