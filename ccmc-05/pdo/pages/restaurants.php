@@ -1,3 +1,13 @@
+<?php
+// Step-1. リクエストパラメータを取得
+// Step-2. データベースに接続
+// Step-3. 実行するSQLを設定
+// Step-4. SQL実行オブジェクトを取得（プレースホルダ付きSQL）
+// Step-5. プレースホルダにリクエストパラメータを設定（置換：replace）
+// Step-6. SQLを実行
+// Step-7. 結果セットを取得
+// Step-8. 結果セットを配列に格納
+?>
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
